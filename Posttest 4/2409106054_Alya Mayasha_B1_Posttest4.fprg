@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106054_Alya Mayasha_B1_Posttest4"/>
+        <attribute name="authors" value="HP-GK"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 10:02:30 PM"/>
+        <attribute name="created" value="SFAtR0s7REVTS1RPUC1OOEFENDAyOzIwMjQtMTAtMDE7MDg6MTM6MjIgUE07MjYxMw=="/>
+        <attribute name="edited" value="SFAtR0s7REVTS1RPUC1OOEFENDAyOzIwMjQtMTAtMDE7MDk6NDM6NDEgUE07MjI7SFAtR0s7REVTS1RPUC1OOEFENDAyOzIwMjQtMDktMjQ7MDc6MzY6NTIgQU07MjQwOTEwNjA1NF9BbHlhIE1heWFzaGFfQjFfUG9zdHRlc3QzLmZwcmc7ODk1Mw=="/>
+        <attribute name="edited" value="SFAtR0s7REVTS1RPUC1OOEFENDAyOzIwMjQtMTAtMDE7MTA6MDI6MzAgUE07MzM7Mjc2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Username, Password, Keluar" type="String" array="False" size=""/>
+            <declare name="LuasPermukaanKubus, VolumeKubus, LuasPermukaanTabung, VolumeTabung, LuasPermukaanBola, VolumeBola" type="Real" array="False" size=""/>
+            <declare name="SisiKubus, TinggiTabung, RadiusTabung, RadiusBola" type="Real" array="False" size=""/>
+            <declare name="Login, Menu" type="Integer" array="False" size=""/>
+            <assign variable="Login" expression="0"/>
+            <while expression="Login &lt; 3">
+                <output expression="&quot;Masukkan username&quot;" newline="True"/>
+                <input variable="Username"/>
+                <output expression="&quot;Masukkan password&quot;" newline="True"/>
+                <input variable="Password"/>
+                <if expression="Username == &quot;Alya&quot;">
+                    <then>
+                        <if expression="Password == &quot;054&quot;">
+                            <then>
+                                <output expression="&quot;Anda berhasil log in&quot;" newline="True"/>
+                                <output expression="&quot;Menu Program Menghitung Luas Permukaan dan Volume Bangun Ruang&quot;" newline="True"/>
+                                <output expression="&quot;Silakan pilih menu yang akan Anda pilih :&quot;&amp;&#13;&#10;&#13;&#10;&quot;1.Luas Permukaan Kubus&quot;&amp;&#13;&#10;&quot;2.Volume Kubus&quot;&amp;&#13;&#10;&quot;3.Luas Permukaan Tabung&quot;&amp;&#13;&#10;&quot;4.Volume Tabung&quot;&amp;&#13;&#10;&quot;5.Luas Permukaan Bola&quot;&amp;&#13;&#10;&quot;6.Volume Bola&quot;&amp;&#13;&#10;&quot;7.Keluar dari program&quot;" newline="True"/>
+                                <input variable="Menu"/>
+                                <if expression="Menu == 1">
+                                    <then>
+                                        <output expression="&quot;Masukkan panjang sisi kubus (dalam cm)&quot;" newline="True"/>
+                                        <input variable="SisiKubus"/>
+                                        <assign variable="LuasPermukaanKubus" expression="6*SisiKubus^2"/>
+                                        <output expression="&quot;Luas permukaan kubus dengan panjang sisi &quot;&amp;SisiKubus&amp;&quot; cm adalah &quot;&amp;LuasPermukaanKubus&amp;&quot; cm^2&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="Menu == 2">
+                                            <then>
+                                                <output expression="&quot;Masukkan panjang sisi kubus (dalam cm)&quot;" newline="True"/>
+                                                <input variable="SisiKubus"/>
+                                                <assign variable="VolumeKubus" expression="SisiKubus^3"/>
+                                                <output expression="&quot;Volume kubus dengan panjang sisi &quot;&amp;SisiKubus&amp;&quot; cm adalah &quot;&amp;VolumeKubus&amp;&quot; cm^3&quot;" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="Menu == 3">
+                                                    <then>
+                                                        <output expression="&quot;Masukkan radius tabung (dalam cm)&quot;" newline="True"/>
+                                                        <input variable="RadiusTabung"/>
+                                                        <output expression="&quot;Masukkan tinggi tabung (dalam cm)&quot;" newline="True"/>
+                                                        <input variable="TinggiTabung"/>
+                                                        <assign variable="LuasPermukaanTabung" expression="2*3.14*RadiusTabung*(RadiusTabung + TinggiTabung)"/>
+                                                        <output expression="&quot;Luas permukaan tabung dengan radius &quot;&amp;RadiusTabung&amp;&quot; cm dan tinggi &quot;&amp;TinggiTabung&amp;&quot; cm adalah &quot;&amp;LuasPermukaanTabung&amp;&quot; cm^2&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="Menu == 4">
+                                                            <then>
+                                                                <output expression="&quot;Masukkan radius tabung (dalam cm)&quot;" newline="True"/>
+                                                                <input variable="RadiusTabung"/>
+                                                                <output expression="&quot;Masukkan tinggi tabung (dalam cm)&quot;" newline="True"/>
+                                                                <input variable="TinggiTabung"/>
+                                                                <assign variable="VolumeTabung" expression="3.14*RadiusTabung^2*TinggiTabung"/>
+                                                                <output expression="&quot;Volume tabung dengan radius &quot;&amp;RadiusTabung&amp;&quot; cm dan tinggi &quot;&amp;TinggiTabung&amp;&quot; cm adalah &quot;&amp;VolumeTabung&amp;&quot; cm^3&quot;" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="Menu == 5">
+                                                                    <then>
+                                                                        <output expression="&quot;Masukkan radius bola (dalam cm)&quot;" newline="True"/>
+                                                                        <input variable="RadiusBola"/>
+                                                                        <assign variable="LuasPermukaanBola" expression="4*3.14*RadiusBola^2"/>
+                                                                        <output expression="&quot;Luas permukaan bola dengan radius &quot;&amp;RadiusBola&amp;&quot; cm adalah  &quot;&amp;LuasPermukaanBola&amp;&quot; cm^2&quot;" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="Menu == 6">
+                                                                            <then>
+                                                                                <output expression="&quot;Masukkan radius bola (dalam cm)&quot;" newline="True"/>
+                                                                                <input variable="RadiusBola"/>
+                                                                                <assign variable="VolumeBola" expression="4/3*3.14*RadiusBola^3"/>
+                                                                                <output expression="&quot;Volume bola dengan radius &quot;&amp;RadiusBola&amp;&quot; cm adalah &quot;&amp;VolumeBola&amp;&quot; cm^3&quot;" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="Menu == 7">
+                                                                                    <then>
+                                                                                        <output expression="&quot;Keluar dari program&quot;" newline="True"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <output expression="&quot;Menu tidak valid&quot;" newline="True"/>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                                <output expression="&quot;Apakah Anda ingin keluar? (ya/tidak)&quot;" newline="True"/>
+                                <input variable="Keluar"/>
+                                <if expression="Keluar == &quot;ya&quot;">
+                                    <then>
+                                        <breakpoint expression="" always="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <assign variable="Login" expression="Login + 1"/>
+                    </else>
+                </if>
+                <output expression="&quot;coba lagi&quot;" newline="True"/>
+            </while>
+            <output expression="&quot;Kesempatan Anda telah habis&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
